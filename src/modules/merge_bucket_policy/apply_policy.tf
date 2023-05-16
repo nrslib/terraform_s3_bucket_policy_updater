@@ -1,6 +1,5 @@
 resource "null_resource" "apply_policy" {
   triggers = {
-    sid                            = var.sid
     append_bucket_policy_statements = "[${join(",", var.append_bucket_policy_statements)}]"
     bucket_id                      = data.aws_s3_bucket.target.id
   }

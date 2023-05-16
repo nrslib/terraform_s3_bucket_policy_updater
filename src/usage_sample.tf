@@ -1,7 +1,6 @@
 module "bucket_policy" {
   source = "./modules/merge_bucket_policy"
 
-  sid                             = local.sid_full_timestamped
   bucket_name                     = var.bucket_name
   append_bucket_policy_statements = [
     jsonencode({
